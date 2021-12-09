@@ -47,16 +47,16 @@ def get_dataCSV(filename, indexCol = True):
 	else:
 		df = pd.read_csv(filename)
 		return df
-dfSharpe = get_dataCSV('StreamlitProject2/SharpeRatios_1.csv')
-dfAlpha = get_dataCSV('StreamlitProject2/AlphaOfFunds.csv')
-dfCumulRet_Sharpe = get_dataCSV('StreamlitProject2/Cumulative Returns Sharpe.csv')
-dfCumulRet_Alpha = get_dataCSV('StreamlitProject2/Cumulative Returns Alpha.csv')
-dfSharpeYearsandWeights =  get_dataCSV('StreamlitProject2/Sharpe Weights and Accounts.csv')
-dfAlphaYearsandWeights = get_dataCSV('StreamlitProject2/Alpha Weights and Accounts.csv')
-dfFuturePortfolio = get_dataCSV('StreamlitProject2/Combined Future Alpha Sharpe Portfolio.csv', False)
+dfSharpe = get_dataCSV('SharpeRatios_1.csv')
+dfAlpha = get_dataCSV('AlphaOfFunds.csv')
+dfCumulRet_Sharpe = get_dataCSV('Cumulative Returns Sharpe.csv')
+dfCumulRet_Alpha = get_dataCSV('Cumulative Returns Alpha.csv')
+dfSharpeYearsandWeights =  get_dataCSV('Sharpe Weights and Accounts.csv')
+dfAlphaYearsandWeights = get_dataCSV('Alpha Weights and Accounts.csv')
+dfFuturePortfolio = get_dataCSV('Combined Future Alpha Sharpe Portfolio.csv', False)
 
 #df = pd.read_excel (r'C:\Users\18479\Downloads\Hedge Fund Data  - Trailing 5-Year Monthly Returns.xlsx')
-df = get_data(r'StreamlitProject2\Hedge Fund Data  - Trailing 5-Year Monthly Returns.xlsx')
+df = get_data(r'Hedge Fund Data  - Trailing 5-Year Monthly Returns.xlsx')
 for i in range(4, len(df.columns)):
     df.iloc[4,i] = df.iloc[4,i].date()
 df.columns = df.iloc[4]
